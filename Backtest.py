@@ -303,7 +303,7 @@ def display_results(df: pd.DataFrame, signal_col: str, title: str, extra_cols: d
         def color_status(val):
             return "color: green; font-weight:bold" if "WIN" in val else "color: red;"
 
-        styled = ui.style.applymap(color_status, subset=["Status"])
+        styled = ui.style.map(color_status, subset=["Status"])
         st.dataframe(styled, use_container_width=True)
 
 
